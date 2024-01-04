@@ -2,6 +2,7 @@ import Link from "next/link";
 import { headers, cookies } from "next/headers";
 import { createClient } from "@/utils/supabase/server";
 import { redirect } from "next/navigation";
+import Twitter from "@/components/twitter";
 
 export default function Login({
   searchParams,
@@ -76,7 +77,7 @@ export default function Login({
         </svg>{" "}
         Back
       </Link>
-
+      <Twitter />
       <form
         className="animate-in flex-1 flex flex-col w-full justify-center gap-2 text-foreground"
         action={signIn}
